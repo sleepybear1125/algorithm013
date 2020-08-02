@@ -1,7 +1,17 @@
+class ListNode {
+    val: number
+    next: ListNode | null
+    constructor(val?: number, next?: ListNode | null) {
+        this.val = (val===undefined ? 0 : val)
+        this.next = (next===undefined ? null : next)
+    }
+}
+
 /*
  * [21] 合并两个有序链表
  * 解法1:递归 时间复杂度O(N+M) 空间复杂度O(N+M)
  */
+
 
 function mergeTwoLists1(l1: ListNode | null, l2: ListNode | null): ListNode | null {
     if (!l1) {
